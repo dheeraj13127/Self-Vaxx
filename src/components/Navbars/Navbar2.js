@@ -18,9 +18,7 @@ function Navbar2() {
         <li className="nav-item">
           <a href="/" className="nav-link text-light" aria-current="page" >Home</a>
         </li>
-        <li className="nav-item">
-          <a href="/about" className="nav-link text-light" >About</a>
-        </li>
+       
       </ul>
     </div>
   </div>
