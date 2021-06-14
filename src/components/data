@@ -1,0 +1,71 @@
+    const [val,setVal]=useState("")
+    const [auth,setAuth]=useState(false)
+
+
+     const filterArray=(array, filters)=> {
+    const filterKeys = Object.keys(filters);
+    return array.filter(item => {
+      // validates all filter criteria
+      return filterKeys.every(key => {
+        // ignores non-function predicates
+        if (typeof filters[key] !== 'function') return true;
+        return filters[key](item[key]);
+      });
+    });
+  }
+
+const filters={
+    pincode:pincode=>pincode===560092,
+    fee_type:auth?fee_type=>fee_type===val:"",
+    available_capacity:ac=>ac!==0
+  }
+  const data=filterArray(pinData,filters)
+  console.log(data)
+
+
+  <div className="container" style={{marginTop:"80px"}}>
+      <div className="row">
+        <div className="col col-sm-12 col-xs-12">
+          <div className="table-responsive">
+          <table className="table  table-bordered">
+        <thead className="table-dark">
+          <tr>
+              <th scope="col">Hospital Name</th>
+              <th scope="col">Date</th>
+              <th scope="col">Pincode</th>
+              <th scope="col">Fee Type</th>
+              <th scope="col">Min Age Limit</th>
+              <th scope="col">Available Capacity</th>
+              <th scope="col">Vaccine</th>
+              <th scope="col">Block Name</th>
+          </tr>
+        </thead>
+
+        <tbody className="table-primary">
+          
+            {data.map((pin,i)=>{
+             
+      
+              return(
+                <tr key={i}>
+                <td>{pin.name}</td>
+                <td>{pin.date}</td>
+                <td>{pin.pincode}</td>
+                <td>{pin.fee_type}</td>
+                <td>{pin.min_age_limit}</td>
+                <td>{pin.available_capacity}</td>
+                <td>{pin.vaccine}</td>
+                <td>{pin.block_name}</td>
+
+                </tr>
+              )
+     
+              
+            })}
+        </tbody>
+      </table>
+          </div>
+        </div>
+      </div>
+      
+    </div>

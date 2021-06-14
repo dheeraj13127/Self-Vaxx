@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body{
+  font-family: 'Poppins', sans-serif;
+  
+}
+.generateCol{
+  -webkit-box-shadow: 1px 2px 11px 7px #838383; 
+box-shadow: 1px 2px 11px 7px #838383;
+}
+
+.slide{
+-webkit-box-shadow: 1px 2px 11px 7px #838383; 
+box-shadow: 1px 2px 11px 7px #838383;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  
+}
+.cards{
+  box-shadow: -3px -1px 11px 0px rgba(81,77,77,0.75);
+  -webkit-box-shadow: -3px -1px 11px 0px rgba(81,77,77,0.75);
+  -moz-box-shadow: -3px -1px 11px 0px rgba(81,77,77,0.75);
+  border-radius: 15px;
+}
+.searchByPinContainer{
+  background-image: url('./components//images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.searchByPinContainer1{
+  background-image: url('./components//images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+@media only screen and (max-width: 600px) {
+  .striped{
+    height: 200vh;
+  }
+}
