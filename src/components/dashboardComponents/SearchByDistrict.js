@@ -139,8 +139,9 @@ setVacc(val)
           <input type="text" className="form-control" placeholder="District ID" onChange={e=>setDisID(e.target.value)}/>
          
           </div>
-          <div className="input-group mt-3">
+          <div className="input-group mt-3 d-flex align-items-center">
           <input type="date" className="form-control" onChange={e=>setDate(e.target.value)}/>
+          <i className="fas fa-calendar-check" style={{fontSize:"25px",marginLeft:"5px"}}></i>
           </div>
           <div className="text-center mt-3">
             <button className="btn btn-light text-primary">Submit</button>
