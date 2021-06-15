@@ -54,7 +54,6 @@ function SearchByCalPin() {
   }
 
   const data=filterArray(calPinData,filters)
-console.log(data)
 
 const onFeeChange=(val)=>{
 setFee(val)

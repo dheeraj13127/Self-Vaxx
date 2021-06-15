@@ -59,7 +59,7 @@ function SearchByPin() {
   }
 
   const data=filterArray(pincodeData,filters)
-console.log(data)
+
 
 const onFeeChange=(val)=>{
 setFee(val)
@@ -140,12 +140,13 @@ setVacc(val)
          
           </div>
           <div className="input-group mt-3">
-          <input type="date" className="form-control" onChange={e=>setDate(e.target.value)}/>
+          <input type="date" placeholder="Date" className="form-control" onChange={e=>setDate(e.target.value)}/>
           </div>
           <div className="text-center mt-3">
             <button className="btn btn-light text-primary">Submit</button>
           </div>
             </form>
+            
            
        </div>
           </div>

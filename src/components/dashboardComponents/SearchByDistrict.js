@@ -59,7 +59,7 @@ function SearchByDistrict() {
   }
 
   const data=filterArray(districtData,filters)
-console.log(data)
+
 
 const onFeeChange=(val)=>{
 setFee(val)
